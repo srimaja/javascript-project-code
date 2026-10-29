@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMÉ ATELIER — Artful Fine Jewellery & Modern Luxury</title>
+  <meta name="description" content="Discover timeless handcrafted fine jewellery that expresses your unique style. 18K solid gold, vermeil, and modern luxury essentials.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-top">
+      <!-- Search Bar -->
+      <div class="search-container">
+        <label for="searchInput" class="search-wrapper">
+          <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.1" y2="16.1"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search gold, vermeil, bags..." 
+            autocomplete="off"
+            aria-label="Search collection"
+          />
+          <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear search" style="display: none;">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </label>
+      </div>
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="LUMÉ ATELIER Home">
+        <span class="brand-text">LUMÉ ATELIER</span>
+      </a>
+
+      <!-- Header Utilities (Wishlist, Account, Cart, Mobile Toggle) -->
+      <div class="header-actions">
+
+        <!-- Bag / Cart -->
+        <a href="cart.html" class="action-btn bag-btn" id="cartBtn" aria-label="Shopping bag">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge" id="cartCount">3</span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="action-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <span class="drawer-brand">LUMÉ ATELIER</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-search">
+      <div class="search-wrapper">
+        <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.1" y2="16.1"></line>
+        </svg>
+        <input type="text" placeholder="Search gold, vermeil, bags..." class="mobile-search-input" />
+      </div>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#jewellery" class="drawer-link active">JEWELLERY</a></li>
+      <li><a href="#earrings" class="drawer-link">EARRINGS</a></li>
+      <li><a href="#watches" class="drawer-link">WATCHES</a></li>
+      <li><a href="#handbags" class="drawer-link">HANDBAGS</a></li>
+      <li><a href="#sunglasses" class="drawer-link">SUNGLASSES</a></li>
+      <li><a href="#hair-accessories" class="drawer-link">HAIR ACCESSORIES</a></li>
+      <li><a href="#new-arrivals" class="drawer-link">NEW ARRIVALS</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <div class="drawer-stats">
+        <span>✨ 18K Solid Gold & Vermeil</span>
+        <span>⭐ 4.9/5 Rating (50K+ Patrons)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Hero Section -->
+  <main class="hero-section">
+    <div class="hero-container">
+      
+      <!-- Left Column: Editorial & Call to Action -->
+      <div class="hero-content">
+        <!-- Edition Tag Badge -->
+        <div class="edition-badge" role="note" aria-label="Current collection season">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span class="badge-text">ATELIER ÉDITION AUTOMNE 2025</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-title">
+          The Little Details<br>
+          Make You Shine
+        </h1>
+
+        <!-- Subtitle Description -->
+        <p class="hero-description">
+          Discover timeless pieces that express your unique style. Artfully handcrafted for modern luxury, imbued with quiet confidence and reverence.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="shopCollectionBtn">
+            <span>Shop Collection</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          
+          <button class="btn btn-secondary" id="exploreArrivalsBtn">
+            <span>Explore New Arrivals</span>
+          </button>
+        </div>
+
+        <!-- Metric & Trust Highlights -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <h3 class="metric-value">18K Solid</h3>
+            <p class="metric-label">Gold & Vermeil Quality</p>
+          </div>
+          
+          <div class="metric-item">
+            <h3 class="metric-value">4.9/5 <span class="star-icon">★</span></h3>
+            <p class="metric-label">Verified Reviews</p>
+          </div>
+          
+          <div class="metric-item">
+            <h3 class="metric-value">50,000+</h3>
+            <p class="metric-label">Patrons Nationwide</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Presentation & Featured Product Card -->
+      <div class="hero-visual">
+        <div class="visual-card-wrapper">
+          <div class="visual-frame">
+            <img 
+              src="hero-model.jpg" 
+              alt="Woman wearing handcrafted Aura Solitaire and Cascade Pendant gold jewelry"
+              class="hero-img"
+              id="heroImage"
+              loading="eager"
+            />
+            
+            <!-- Floating Featured Product Look Card -->
+            <div class="featured-look-card" id="featuredLookCard" tabindex="0" role="button" aria-label="View Aura Solitaire & Cascade Pendant details">
+              <div class="look-info">
+                <span class="look-tag">FEATURED LOOK</span>
+                <h4 class="look-title">Aura Solitaire &amp; Cascade Pendant</h4>
+              </div>
+              <div class="look-price-wrap">
+                <span class="look-price">₹5,499</span>
+                <button class="quick-add-btn" id="quickAddBtn" title="Quick Add to Bag" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- Curated Products Section (6 in a row, responsive, dynamically rendered from JSON) -->
+  <section class="products-section" id="productsSection">
+    <div class="products-container">
+      
+      <!-- Section Header matching the reference design -->
+      <div class="products-header">
+        <div class="products-title-group">
+          <span class="section-kicker">CURATED TAXONOMY</span>
+          <h2 class="section-heading">Products</h2>
+        </div>
+        <p class="products-subtitle">
+          Individually cast and sculpted objects, calibrated for everyday distinction.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-filter-bar" id="categoryFilterBar" role="tablist" aria-label="Filter products by category">
+        <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All (12)</button>
+        <button class="filter-pill" data-filter="Jewellery" role="tab" aria-selected="false">Jewellery</button>
+        <button class="filter-pill" data-filter="Earrings" role="tab" aria-selected="false">Earrings</button>
+        <button class="filter-pill" data-filter="Watches" role="tab" aria-selected="false">Watches</button>
+        <button class="filter-pill" data-filter="Handbags" role="tab" aria-selected="false">Handbags</button>
+        <button class="filter-pill" data-filter="Sunglasses" role="tab" aria-selected="false">Sunglasses</button>
+        <button class="filter-pill" data-filter="Hair Accessories" role="tab" aria-selected="false">Hair Accents</button>
+      </div>
+
+      <!-- 6-column Responsive Product Cards Grid -->
+      <div class="products-grid" id="productsGrid" aria-live="polite">
+        <!-- Rendered dynamically by index.js using productsData JSON -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Craftsmanship / Brand Story Feature Section -->
+  <section class="craftsmanship-section" id="craftsmanshipSection">
+    <div class="craftsmanship-container">
+      <div class="craftsmanship-card">
+        <!-- Left Image: Master Jeweler at Workbench -->
+        <div class="craftsmanship-visual">
+          <img 
+            src="artisan-craftsman.jpg" 
+            alt="Artisan jeweler hand-carving gold jewelry at workbench" 
+            class="craftsmanship-img"
+            loading="lazy"
+          />
+        </div>
+        <!-- Right Content: Editorial Brand Story -->
+        <div class="craftsmanship-content">
+          <span class="craftsmanship-kicker">CONSCIOUS CRAFTSMANSHIP</span>
+          <h2 class="craftsmanship-title">Your Everyday Style,<br>Elevated</h2>
+          <p class="craftsmanship-desc">
+            At Lumé Atelier, we renounce seasonal churn in favor of eternal silhouettes. Every pendant is cast using 100% recycled precious metals, certified conflict-free stones, and hand-finished by multi-generational artisans.
+          </p>
+          <p class="craftsmanship-desc">
+            Designed to accompany your rhythm from boardroom mornings to candlelit dinners—unobtrusive, resonant, and resilient.
+          </p>
+          <div class="craftsmanship-footer">
+            <button class="btn btn-primary craftsmanship-btn" id="discoverMoreBtn">
+              <span>Discover More</span>
+            </button>
+            <span class="craftsmanship-quote">"Quiet luxury made palpable."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exclusive Drops & Bespoke Highlights Section -->
+  <section class="exclusive-drops-section" id="exclusiveDropsSection">
+    <div class="exclusive-drops-container">
+      
+      <!-- Section Header -->
+      <div class="exclusive-drops-header">
+        <div class="exclusive-title-group">
+          <span class="exclusive-kicker">EXCLUSIVE DROPS</span>
+          <h2 class="exclusive-title">New Arrivals &amp; Bespoke Highlights</h2>
+        </div>
+        <a href="#productsSection" class="view-all-link" id="viewAllReleasesLink">View All Releases</a>
+      </div>
+
+      <!-- Highlights 2-column Grid -->
+      <div class="drops-grid">
+        
+        <!-- Card 1: Celestial Zodiac Pendant -->
+        <article class="highlight-card" id="dropCard1">
+          <div class="highlight-img-wrap">
+            <img 
+              src="celestial-pendant.jpg" 
+              alt="Celestial Zodiac Pendant hand-chiseled in 18K solid gold vermeil" 
+              class="highlight-img"
+              loading="lazy"
+            />
+            <span class="highlight-badge">BESPOKE</span>
+          </div>
+          <div class="highlight-info">
+            <span class="highlight-label">LIMITED EDITION</span>
+            <h3 class="highlight-name">Celestial Zodiac Pendant</h3>
+            <p class="highlight-desc">
+              Cast in solid 18K gold vermeil with hand-chiseled celestial constellations. Customizable reverse engraving.
+            </p>
+            <div class="highlight-price-wrap">
+              <span class="highlight-price">₹3,199</span>
+            </div>
+            <div class="highlight-actions">
+              <button class="btn-highlight-add" data-name="Celestial Zodiac Pendant" data-price="3199" aria-label="Add Celestial Zodiac Pendant to bag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" class="bag-icon">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+              <button class="btn-highlight-view" data-name="Celestial Zodiac Pendant" title="Quick View" aria-label="Quick view Celestial Zodiac Pendant">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Woven Leather Bag -->
+        <article class="highlight-card" id="dropCard2">
+          <div class="highlight-img-wrap">
+            <img 
+              src="woven-leather-bag.jpg" 
+              alt="Artisan Woven Leather Bag handcrafted in Tuscany" 
+              class="highlight-img"
+              loading="lazy"
+            />
+            <span class="highlight-badge">NEW SEASON</span>
+          </div>
+          <div class="highlight-info">
+            <span class="highlight-label">TUSCAN LEATHER</span>
+            <h3 class="highlight-name">Woven Leather Bag</h3>
+            <p class="highlight-desc">
+              Intricately interwoven by Italian leather sculptors. Includes detachable gold-plated chain shoulder strap.
+            </p>
+            <div class="highlight-price-wrap">
+              <span class="highlight-price">₹5,899</span>
+            </div>
+            <div class="highlight-actions">
+              <button class="btn-highlight-add" data-name="Woven Leather Bag" data-price="5899" aria-label="Add Woven Leather Bag to bag">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" class="bag-icon">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add to Bag</span>
+              </button>
+              <button class="btn-highlight-view" data-name="Woven Leather Bag" title="Quick View" aria-label="Quick view Woven Leather Bag">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trust Guarantees / Service Highlights Section -->
+  <section class="trust-guarantees-section" id="trustSection">
+    <div class="trust-container">
+      <div class="trust-grid">
+        
+        <!-- Guarantee 1: Hallmarked & Certified -->
+        <div class="trust-card">
+          <div class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              <polyline points="9 11 11 13 15 9"></polyline>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3 class="trust-title">Hallmarked &amp; Certified</h3>
+            <p class="trust-desc">
+              Every creation is independently certified with BIS hallmarked 18K gold and accredited ethical stones.
+            </p>
+          </div>
+        </div>
+
+        <!-- Guarantee 2: Express Shipping -->
+        <div class="trust-card">
+          <div class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3 class="trust-title">Express Shipping</h3>
+            <p class="trust-desc">
+              Dispatched within 24 hours in tamper-proof, temperature-stable bespoke archival presentation packaging.
+            </p>
+          </div>
+        </div>
+
+        <!-- Guarantee 3: 7-Day Easy Returns -->
+        <div class="trust-card">
+          <div class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3 class="trust-title">7-Day Easy Returns</h3>
+            <p class="trust-desc">
+              Stress-free exchanges and doorstep reverse pick-ups across all primary metros nationwide.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+      
+      <!-- Left Column: Brand & Newsletter -->
+      <div class="footer-brand-col">
+        <a href="#" class="footer-brand-logo" aria-label="LUMÉ ATELIER Home">
+          <span class="footer-brand-text">LUMÉ ATELIER</span>
+        </a>
+        <p class="footer-brand-tagline">
+          Fine personal accoutrements curated with understated reverence. Crafted for the collector of lasting moments.
+        </p>
+
+        <!-- Newsletter Subscription Card -->
+        <div class="newsletter-card">
+          <h4 class="newsletter-title">Sign up for 10% off your first order</h4>
+          <p class="newsletter-subtitle">Receive private viewings and seasonal releases.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+              type="email" 
+              id="newsletterEmail" 
+              class="newsletter-input" 
+              placeholder="Enter your email address" 
+              required 
+              aria-label="Email address for newsletter"
+            />
+            <button type="submit" class="newsletter-submit-btn" id="newsletterSubmitBtn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Columns: Navigation Links -->
+      <div class="footer-links-grid">
+        
+        <!-- Column 1: Editorial -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">EDITORIAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#editorial" class="footer-link">Bespoke Inquiries</a></li>
+            <li><a href="#appointments" class="footer-link">Private Appointments</a></li>
+            <li><a href="#journal" class="footer-link">The Journal</a></li>
+            <li><a href="#sustainability" class="footer-link">Sustainability Protocol</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Atelier -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">ATELIER</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#jewellery" class="footer-link footer-cat-link" data-cat="Jewellery">Jewellery</a></li>
+            <li><a href="#watches" class="footer-link footer-cat-link" data-cat="Watches">Watches</a></li>
+            <li><a href="#handbags" class="footer-link footer-cat-link" data-cat="Handbags">Handbags</a></li>
+            <li><a href="#care" class="footer-link">Care &amp; Maintenance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Client Care -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">CLIENT CARE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#shipping" class="footer-link">Shipping &amp; Returns</a></li>
+            <li><a href="#track" class="footer-link">Track Order</a></li>
+            <li><a href="#concierge" class="footer-link">Concierge</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal & Connect -->
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">LEGAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#legal" class="footer-link">Legal Notice</a></li>
+            <li><a href="#privacy" class="footer-link">Privacy Policy</a></li>
+          </ul>
+          
+          <h4 class="footer-nav-heading footer-connect-heading">CONNECT</h4>
+          <div class="footer-social-row">
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- Pinterest / Pin -->
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="17" x2="12" y2="22"></line>
+                <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6a3 3 0 0 0-3-3v0a3 3 0 0 0-3 3v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V17z"></path>
+              </svg>
+            </a>
+            <!-- Chat / Message -->
+            <button type="button" class="social-icon-btn" id="footerChatBtn" aria-label="Live Chat Support">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright line -->
+    <div class="footer-bottom">
+      <p class="copyright-text">&copy; 2026 LUMÉ ATELIER. All rights reserved. Handcrafted with fine materials.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container for interactive feedback -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="index.js"></script>
+</body>
+</html>
